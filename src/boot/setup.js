@@ -14,11 +14,13 @@ import { StyleProvider } from "native-base";
 
 import { store } from "./configureStore";
 import AppWithNavigationState from '../App';
+import getTheme from "../theme/components";
+import variables from "../theme/variables/commonColor";
 
 class Setup extends React.Component {
   render() {
     return (
-      <StyleProvider>
+      <StyleProvider style={getTheme(variables)}>
         <Provider store={store}>
           <AppWithNavigationState />
         </Provider>
