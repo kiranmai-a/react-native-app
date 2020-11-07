@@ -15,3 +15,5 @@ export const ITEMS_IS_LOADING = 'ITEMS_IS_LOADING'
 //Dashboard
 
 export const SET_LANGUAGES = 'SET_LANGUAGES'
+export const SET_OTP = 'SET_OTP'
+export const VALIDATE_OTP = 'VALIDATE_OTP'
