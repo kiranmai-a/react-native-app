@@ -1,5 +1,5 @@
 import { Platform } from "react-native";
-import FooterTabTheme from './nsa/FooterTabs'
+import FooterTabTheme from './trabo/FooterTabs'
 import variable from "./../variables/platform";
 
 export default (variables = variable) => {

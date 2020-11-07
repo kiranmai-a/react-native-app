@@ -4,9 +4,11 @@
 import URLs from './urls'
 import * as constants from './constants'
 import * as types from './types'
+import Api from './api'
 
 export {
     URLs,
     constants,
-    types
+    types,
+    Api
 }

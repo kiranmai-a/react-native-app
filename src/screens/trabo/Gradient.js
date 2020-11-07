@@ -67,7 +67,6 @@ class Gradient extends Component {
         if(bottomColor) {
             colors =AppStyles.gradient.bottomColor
         }
-        console.log("colors", colors, index)
 
         if(bottom) {
             return (

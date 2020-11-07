@@ -54,7 +54,12 @@ const AppStyles = {
         bg: primary,
         tabBarPosition: "bottom",
     },
-
+    toast: {
+        success: '#76D7C4',
+        warning: '#F0B27A',
+        info: '#00CED1',
+        error: '#EC7063',
+    },
 }
 
 export default AppStyles

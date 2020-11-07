@@ -1,5 +1,5 @@
 import variable from "./../variables/platform";
-import TextTheme from './nsa/Text'
+import TextTheme from './trabo/Text'
 
 export default (variables = variable) => {
     const textTheme = {

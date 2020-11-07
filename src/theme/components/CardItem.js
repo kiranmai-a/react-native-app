@@ -1,5 +1,5 @@
 import variable from "./../variables/platform";
-import CardItemTheme from "./nsa/CardItem";
+import CardItemTheme from "./trabo/CardItem";
 
 
 export default (variables = variable) => {

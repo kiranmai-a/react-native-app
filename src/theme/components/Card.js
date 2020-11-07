@@ -1,5 +1,5 @@
 import variable from "./../variables/platform";
-import CardTheme from "./nsa/Card";
+import CardTheme from "./trabo/Card";
 
 export default (variables = variable) => {
 	const cardTheme = {

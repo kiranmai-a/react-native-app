@@ -1,58 +1,13 @@
 import React, {Component} from "react";
-import {Image, FlatList, TouchableOpacity, Dimensions, Alert, BackHandler, ImageBackground} from "react-native";
-// import {NavigationActions} from "react-navigation";
-import {CardItem, Card, Col, Content, Text, View, Button, Icon} from "native-base";
-import {AppHeader, Background, Gradient} from "../";
-import {Images} from "../../theme/style";
+import { Content, Text, View, Button } from "native-base";
+
+import { Background, Gradient } from "../";
 import styles from "./style";
 
-import {ActionCreators, bindActionCreators, connect} from "../../common/imports/redux/";
-
-
 class Home extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            dataSource: [],
-            noData: false,
-            position: 0,
-            interval: null,
-            empTimeTable: undefined
-        };
-
-    }
-
-   /* componentDidMount() {
-        this.props.getlanguages();
-    }*/
-
-
-
-    renderRow(item, index, seperator) {
-        alert(item.name)
-        return (
-            <Col style={styles.colWidth}>
-                <TouchableOpacity >
-                    <View style={{alignItems: 'center', justifyContent: 'center', margin: 5}}>
-                        <View style={styles.circle}>
-                            <Image
-                                source={Images[item.icon]}
-                                style={{height: 25, width: 25, tintColor: '#fff'}}
-                            />
-                        </View>
-                        <Text sub h6
-                              style={[styles.marginTop5, {color: "#000"}]}>{item.name != null && item.name != undefined ? item.name.toUpperCase() : ' '}</Text>
-                    </View>
-                </TouchableOpacity>
-            </Col>
-        )
-    }
-
     render() {
         return (
             <Background >
-                {/*<AppHeader right {...this.props} title="Dashboard"/>*/}
                 <Gradient bottom gstyle={{flex: 1}} screen="dashboard">
                     <Content >
                         <View style={{zIndex: 4}}>
@@ -72,7 +27,7 @@ class Home extends Component {
                         <View style={{alignSelf: 'center'}}>
                             <View style={{marginBottom: 30}}/>
                             <Button style={styles.btn} onPress={() => {
-                                this.props.navigation.navigate('Dashboard1');
+                                this.props.navigation.navigate('EnterMobile');
                             }}>
                                 <Text style={{justifyContent: 'center'}}> GET STARTED </Text>
                             </Button>
@@ -81,22 +36,8 @@ class Home extends Component {
                     </Content>
                 </Gradient>
             </Background>
-
         );
     }
 }
 
-function bindAction(dispatch) {
-    return bindActionCreators(ActionCreators, dispatch);
-}
-
-//const mapStateToProps = state => ({
-//    languages: state.languageReducer.languages,
-//})
-
-const mapStateToProps = function(state) {
-    return { languages: state.languageReducer.languages }
-};
-
-export default connect(mapStateToProps, bindAction)(Home);
-
+export default Home;

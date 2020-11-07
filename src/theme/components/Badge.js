@@ -1,5 +1,5 @@
 import variable from "./../variables/platform";
-import BadgeTheme from "./nsa/Badge";
+import BadgeTheme from "./trabo/Badge";
 
 export default (variables = variable) => {
 	const badgeTheme = {

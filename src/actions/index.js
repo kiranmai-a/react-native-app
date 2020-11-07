@@ -1,5 +1,5 @@
-import * as languageActions from './languages/languages'
+import * as homeActions from './home/home'
 
 export const ActionCreators = Object.assign({},
-    languageActions
+    homeActions
 );

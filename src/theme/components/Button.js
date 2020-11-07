@@ -1,6 +1,6 @@
 import variable from "./../variables/platform";
 import {AppStyles} from '../style/'
-import ButtonTheme from './nsa/Button'
+import ButtonTheme from './trabo/Button'
 export default (variables = variable) => {
     const platformStyle = variables.platformStyle;
     const platform = variables.platform;

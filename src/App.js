@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Home }  from './screens/index';
+import { Home, EnterMobile, VerifyOtp }  from './screens/index';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +23,8 @@ class AppWithNavigationState extends React.Component {
                     headerShown: false
                 }}>
                     <Stack.Screen name="Home" component={Home} />
+                    <Stack.Screen name="EnterMobile" component={EnterMobile} />
+                    <Stack.Screen name="VerifyOtp" component={VerifyOtp} />
                 </Stack.Navigator>
             </NavigationContainer>
         );
