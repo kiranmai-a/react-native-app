@@ -1,11 +1,11 @@
-import Dashboard from './Dashboard/Dashboard';
+import Home from './Home/Home';
 import Background from './Background/Background';
 import { Gradient } from './trabo/Gradient';
 import BackAppHeader from './AppHeader/BackAppHeader';
 
 
 export {
-    Dashboard,
+    Home,
     Background,
     Gradient,
     BackAppHeader

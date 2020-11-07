@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Dashboard }  from './screens/index';
+import { Home }  from './screens/index';
 
 const Stack = createStackNavigator();
 
@@ -19,10 +19,10 @@ class AppWithNavigationState extends React.Component {
     render() {
         return (
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Dashboard" screenOptions={{
+                <Stack.Navigator initialRouteName="Home" screenOptions={{
                     headerShown: false
                 }}>
-                    <Stack.Screen name="Dashboard" component={Dashboard} />
+                    <Stack.Screen name="Home" component={Home} />
                 </Stack.Navigator>
             </NavigationContainer>
         );

@@ -15,7 +15,7 @@ import {
 } from "native-base";
 
 import styles from "../app-style";
-import styles1 from '../Dashboard/style'
+import styles1 from '../Home/style'
 import {Images} from "../../theme/style";
 import {BackHandler, ImageBackground} from 'react-native'
 let opac = 1.0;

@@ -9,7 +9,7 @@ import styles from "./style";
 import {ActionCreators, bindActionCreators, connect} from "../../common/imports/redux/";
 
 
-class Dashboard extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
 
@@ -23,9 +23,9 @@ class Dashboard extends Component {
 
     }
 
-    componentDidMount() {
+   /* componentDidMount() {
         this.props.getlanguages();
-    }
+    }*/
 
 
 
@@ -50,14 +50,6 @@ class Dashboard extends Component {
     }
 
     render() {
-        console.log('test languages', this.props)
-        const languagesArray = [{
-            "name": 'English', icon: 'eng', text: 'A', bgColor: 'rgba(3,154,170,0.9)'
-        },{
-            "name": 'Tamil', icon: 'tamil', text: 'அ', bgColor: 'rgba(107,106,77,0.9)'
-        }];
-        let data = this.props.languages.length > 0 ? false: true;
-        console.log("came ", data, this.props.languages)
         return (
             <Background >
                 {/*<AppHeader right {...this.props} title="Dashboard"/>*/}
@@ -103,9 +95,8 @@ function bindAction(dispatch) {
 //})
 
 const mapStateToProps = function(state) {
-    console.log('test state', state); // state
     return { languages: state.languageReducer.languages }
 };
 
-export default connect(mapStateToProps, bindAction)(Dashboard);
+export default connect(mapStateToProps, bindAction)(Home);
 

@@ -13,43 +13,7 @@ const platformStyle = undefined;
 module.exports = {
     platformStyle,
     platform,
-    // AndroidRipple
-    androidRipple: true,
-    androidRippleColor: "rgba(256, 256, 256, 0.3)",
-    androidRippleColorDark: "rgba(0, 0, 0, 0.15)",
 
-    // Badge
-    badgeBg: "#007adf",
-    headerBg: header.bg,
-    badgeColor: "#fff",
-    // New Variable
-    badgePadding: platform === "ios" ? 3 : 0,
-
-    // Button
-    btnFontFamily: platform === "ios" ? "System" : "Roboto_medium",
-    btnDisabledBg: "#b5b5b5",
-    btnDisabledClr: "#f1f1f1",
-
-    // CheckBox
-    CheckboxRadius: platform === "ios" ? 13 : 0,
-    CheckboxBorderWidth: platform === "ios" ? 1 : 2,
-    CheckboxPaddingLeft: platform === "ios" ? 4 : 2,
-    CheckboxPaddingBottom: platform === "ios" ? 0 : 5,
-    CheckboxIconSize: platform === "ios" ? 21 : 14,
-    CheckboxIconMarginTop: platform === "ios" ? undefined : 1,
-    CheckboxFontSize: platform === "ios" ? 23 / 0.9 : 18,
-    DefaultFontSize: 17,
-    checkboxBgColor: "#039BE5",
-    checkboxSize: 20,
-    checkboxTickColor: "#fff",
-
-    // Segment
-    segmentBackgroundColor: platform === "ios" ? "#F8F8F8" : "#3F51B5",
-    segmentActiveBackgroundColor: platform === "ios" ? "#2f373a" : "#fff",
-    segmentTextColor: platform === "ios" ? "#2f373a" : "#fff",
-    segmentActiveTextColor: platform === "ios" ? "#fff" : "#3F51B5",
-    segmentBorderColor: platform === "ios" ? "#2f373a" : "#fff",
-    segmentBorderColorMain: platform === "ios" ? "#a7a6ab" : "#3F51B5",
 
     // New Variable
     get defaultTextColor() {
