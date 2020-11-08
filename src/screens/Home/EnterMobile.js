@@ -2,8 +2,6 @@ import React, {Component} from "react";
 import { Content, Text, View, Button, Input } from "native-base";
 
 import { Background, Gradient } from "../";
-import styles from "./style";
-import { ActionCreators, bindActionCreators, connect } from "../../common/imports/redux/";
 
 class EnterMobile extends Component {
     constructor(props) {
@@ -35,6 +33,8 @@ class EnterMobile extends Component {
                                 placeholder="Enter mobile number here..."
                                 placeholderTextColor="#fff"
                                 value={this.state.mobileNumber}
+                                keyboardType="numeric"
+                                maxLength={10}
                                 onChangeText={(texts) => this.setState({mobileNumber:texts,allowEditing: true})}>
                             </Input>
                         </View>
@@ -62,12 +62,4 @@ class EnterMobile extends Component {
     }    
 }
 
-
-function bindAction(dispatch) {
-    return bindActionCreators(ActionCreators, dispatch);
-}
-
-const mapStateToProps = state => ({
-});
-
-export default connect(mapStateToProps, bindAction)(EnterMobile);
+export default EnterMobile;
