@@ -18,7 +18,7 @@ export function validateOtp(mobileNumber, otpNum) {
     return (dispatch, getState) => {
         dispatch(common.itemsIsLoading(true, true));
         return Api.get(`${URLs.VALIDATE_OTP_URL}/${mobileNumber}?otpnum=${otpNum}`).then(response => {
-            dispatch(response.success ? sendOtpValidation(response) : common.handleError(types.TOAST_ERROR, response.data, dispatch));
+            dispatch(response.success ? sendOtpValidation(response) : common.handleError(types.TOAST_ERROR, response, dispatch));
             dispatch(common.itemsIsLoading(false, false));
         }).catch((ex) => {
             common.handleError(types.TOAST_INFO, null, dispatch)

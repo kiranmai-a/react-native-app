@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Content, Text, View, Button } from "native-base";
+import { Content, Text, View, Button, Input } from "native-base";
 import { Background, Gradient } from "../";
 import { TextInput} from 'react-native';
 import { ActionCreators, bindActionCreators, connect } from "../../common/imports/redux/";
@@ -10,8 +10,7 @@ class VerifyOtp extends Component {
         super(props);
         this.props.sendOtp(this.props.route.params.mobileNumber);
         this.state = {
-            otpTime: 60,
-            otpSentCount: 0,
+            otpTime: 60, otpMessge: ''
         }
         this.startOtpInterval()
     }
@@ -43,7 +42,6 @@ class VerifyOtp extends Component {
     validateOtp() {
         this.props.validateOtp(this.props.route.params.mobileNumber, (this.state.text).toString() + (this.state.text1).toString() + (this.state.text2).toString() + (this.state.text3).toString());
     }
-
     render() {
         const { mobileNumber } = this.props.route.params;
         let otp = this.props.otp ? this.props.otp.otp : ''
@@ -101,23 +99,18 @@ class VerifyOtp extends Component {
                         </View>
                         <View style={{marginBottom: 30}}/>
                         <View style={{flex: 1, flexDirection: 'row'}}>
-                            {this.state.otpSentCount === 0 && 
-                                (
-                                    this.state.otpTime > 0 ? <Text  style={{fontSize:18, color: '#ffffff', marginLeft: 20, marginTop: 10}}> Resend in 00:{this.state.otpTime} sec</Text> :
-                                    <View style={{flex:1, flexDirection: 'row', justifyContent: 'flex-start', marginLeft: 20}}>
-                                        <Button style={{width: 150, height: 50, borderRadius: 5, justifyContent: 'center'}} onPress={() => {
-                                            this.props.sendOtp(mobileNumber).then(
-                                                this.setState({otpSentCount: this.state.otpSentCount + 1})
-                                            )
-                                        }}>
-                                            <Text> Resend </Text>
-                                        </Button>
-                                    </View>
-                                )
+                            {this.state.otpTime > 0 ? <Text  style={{fontSize:18, color: '#ffffff', marginLeft: 20, marginTop: 10}}> Resend in 00:{this.state.otpTime} sec</Text> :
+                                <View style={{flex:1, flexDirection: 'row', justifyContent: 'flex-start', marginLeft: 20}}>
+                                    <Button style={{width: 150, height: 50, borderRadius: 5, justifyContent: 'center'}} onPress={() => {
+                                        console.log('test clicked')
+                                    }}>
+                                        <Text> Resend </Text>
+                                    </Button>
+                                </View>
                             }
                             <View style={{flex:1, flexDirection: 'row', justifyContent: 'flex-end', marginRight: 20}}>
                                 <Button style={{width: 150, height: 50, borderRadius: 5, justifyContent: 'center'}} onPress={() => {
-                                    this.validateOtp();
+                                    console.log('test clicked'); this.validateOtp();
                                 }}>
                                     <Text> LOGIN </Text>
                                 </Button>

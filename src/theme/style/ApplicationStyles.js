@@ -2,7 +2,7 @@ const primary = '#f83c5c'
 const secondary = '#f83c5c' //#39b696
 const iconColor = '#fb5f26'
 const iconDescColor = '#006400';
-const btnColor = '#F2851E'
+const btnColor = '#12DB96'
 
 
 
@@ -26,7 +26,7 @@ const AppStyles = {
     gradient: {
         color: [primary, secondary],
         secondary: gradientSecondary,
-        scolor: ['#3455A4', '#31499D'],
+        scolor: ['#1a63a5', '#1a63a5'],
         triColor: ["#44D1AD", "#44D1AD", '#fb5f26',"#fb5f26"],
         bottomColor: ['#fb5f26',"#fb5f26"]
     },

@@ -69,11 +69,18 @@ export default {
         shadowOffset: { height: 4},
         shadowOpacity: 0.5,
     },
+    inputText: {
+        height: 60,
+        alignSelf:'center',
+        fontSize: 30,
+        color: 'white'
+    },
     btn: {
         justifyContent: 'center',
-        width: 370,
+        width: 150,
         height: 50,
-        borderRadius: 5
+        color: '#000000',
+        borderRadius: 50
     },
     textShadowText: {
         color: '#fff',
